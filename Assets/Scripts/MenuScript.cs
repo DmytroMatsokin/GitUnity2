@@ -6,6 +6,7 @@ using UnityEditor;
 
 public class MenuScript : MonoBehaviour
 {
+    public string userName;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class MenuScript : MonoBehaviour
 
     public void QuitGame()
     {
+        GameManager.Instance.SaveHiScore();
        
     #if UNITY_EDITOR
             EditorApplication.ExitPlaymode();
